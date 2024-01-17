@@ -40,11 +40,11 @@ function find24(number) {
         ];
     }
     let formulas = new Set();
-    let permutations = getPermutations(number.split('')); // ใช้เพื่อแยกตัวเลขออกมาเป็นกลุ่มยกเว้นเลขที่ตรงกับ index 
+    let permutations = getPermutations(number.split(''));
     permutations.forEach((permutation) => {
-        let operators = permutationOperators(["+", "-", "*", "/"]); // ใช้ในการนำเครื่องหมายไปใส่ให้ครบทุกรูปแบบ
+        let operators = permutationOperators(["+", "-", "*", "/"]);
         operators.forEach((ops) => {
-            let expressions = generateExpressions(permutation, ops); //  ใช้ในการจัดรูปแบบโดย ()
+            let expressions = generateExpressions(permutation, ops);
             expressions.forEach((expr) => {
                 if (eval(expr) === 24) {
                     formulas.add(expr);

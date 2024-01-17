@@ -1,5 +1,1 @@
 node_modules
-controller/index.js
-model/masterData.js
-service/masterDataService.js
-utils/find24.js
